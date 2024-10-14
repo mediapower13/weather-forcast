@@ -3,6 +3,7 @@
 // ELEMENTS SELECTION
 /////////////////////////////////////////////////////////////
 // GENERAL
+console.log("Hello world");
 const body = document.querySelector("body");
 const searchForm = document.querySelector(".search-form");
 const enterSearch = document.querySelector(".input-search-icon");
