@@ -9,6 +9,8 @@ const searchForm = document.querySelector(".search-form");
 const enterSearch = document.querySelector(".input-search-icon");
 const futureFore = document.querySelector(".future-forecast");
 
+console.log('testing")
+
 // LOCATION
 const locationErr = document.querySelector(".location-err");
 const curLocation = document.querySelector(".location");
