@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  max-width: 1440px;
+  min-width: 400px;
+  color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+
+  background: rgb(126, 151, 171);
+
+  background: linear-gradient(50deg,
+      rgb(5, 41, 69) 0%,
+      rgb(7, 47, 56) 50%,
+      rgb(3, 32, 56) 100%);
+
+  background: -moz-linear-gradient(50deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      rgb(10, 53, 63) 50%,
+      rgb(10, 45, 74) 100%);
+
+  background: -webkit-linear-gradient(50deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      hsla(191, 28%, 23%, 1) 50%,
+      hsla(207, 41%, 27%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
+  background-attachment: fixed;
+  transition: all ease-out 0.5s;
+}
+
+p {
+  font-weight: 400;
+}
+
+svg {
+  width: 3rem;
+  height: 3rem;
+  fill: none;
+  stroke-width: 1.5;
+  stroke: currentColor;
+}
+
+/* Main app */
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* layouts */
+.main {
+  width: 95%;
+  padding: 3rem 2rem;
+  height: 100%;
+  transition: all ease-out 0.5s;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.input-container {
+  position: relative;
+}
+
+input {
+  width: 28rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  padding: 0.6rem 3.5rem 0.6rem 0.6rem;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.input-search-icon {
+  cursor: pointer;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: rgb(121, 118, 118);
+  top: 3px;
+  right: 3px;
+}
+
+.hour {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hour-mobile {
+  display: none;
+  font-weight: 600;
+}
+
+.menu-bar {
+  display: none;
+  width: 3rem;
+  cursor: pointer;
+}
+
+
+/* LOCATION INFO */
+
+.location-container {
+  /* margin-top: 50px; */
+  margin-top: 6.5vh;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.location {
+  font-size: 3.2rem;
+}
+
+.time {
+  font-size: 1.8rem;
+}
+
+/* FORECAST */
+
+.cur-forecast {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.cur-image {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 2.5rem auto;
+}
+
+.cur-weather {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.dec {
+  font-size: 1.9rem;
+  margin-top: 3vh;
+}
+
+.future-forecast {
+  width: max-content;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.future {
+  background-color: #f8f9fa52;
+  backdrop-filter: blur(10px);
+  padding: 1.6rem 3rem;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.weekday {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.day {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.image {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  margin: auto;
+}
+
+.data {
+  font-size: 2.3rem;
+}
+
+.futDesc {
+  font-size: 1.6rem;
+}
+
+/* ASIDE */
+
+aside {
+  box-sizing: inherit;
+  background-color: #343a40;
+  padding: 3rem 0.5rem 3rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  width: 6.8rem;
+}
+
+aside svg {
+  width: 3rem;
+  cursor: pointer;
+  stroke: rgb(179, 177, 177);
+}
+
+aside svg:hover {
+  stroke: #dee2e6;
+}
+
+.desk-nav {
+  width: 4.798rem;
+  height: 3.4rem;
+}
+
+/* MODAL */
+.modal {
+  position: absolute;
+  z-index: 50;
+  width: 85%;
+  margin: 0 auto;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #343a40;
+  color: rgb(179, 177, 177);
+  transition: all 0.5s ease-in-out;
+}
+
+h4 {
+  font-size: 2.3rem;
+  margin-bottom: 6vh;
+  color: #f2f2f2;
+}
+
+.cont {
+  display: flex;
+  flex-flow: column;
+  gap: 25px;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.menu-icons {
+  width: 3rem;
+}
+
+.menu-text {
+  display: block;
+  font-size: 2rem;
+  position: relative;
+  top: 12.5px;
+  text-decoration: none;
+  color: rgb(179, 177, 177);
+  margin-bottom: 3vh;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 40;
+  background-color: #343a4098;
+}
+
+.design {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+.ui-design {
+  width: 150px;
+  height: 100px;
+  background-color: #aaa8a8;
+  border-radius: 5px;
+}
+
+.error {
+  position: absolute;
+  top: -10%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #343a40;
+  color: #f2f2f2;
+  font-size: 1.6rem;
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 69;
+  transition: all ease-in 0.45s;
+}
+
+/* UI DISPLAY */
+.one {
+  background: linear-gradient(50deg,
+      hsla(205, 46%, 10%, 1) 0%,
+      hsla(191, 28%, 23%, 1) 50%,
+      hsla(207, 41%, 27%, 1) 100%);
+}
+
+.two {
+  background: linear-gradient(50deg,
+      hsla(347, 89%, 61%, 1) 0%,
+      hsla(242, 42%, 40%, 1) 100%);
+}
+
+.three {
+  background: linear-gradient(50deg,
+      hsla(155, 23%, 71%, 1) 0%,
+      hsla(302, 17%, 32%, 1) 100%);
+}
+
+.four {
+  background: linear-gradient(50deg,
+      hsla(10, 82%, 65%, 1) 0%,
+      hsla(290, 79%, 13%, 1) 100%);
+}
+
+.five {
+  background: linear-gradient(50deg,
+      hsla(159, 35%, 45%, 1) 0%,
+      hsla(176, 68%, 12%, 1) 100%);
+}
+
+/* ********************* */
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 880px) {
+  .future-forecast {
+    gap: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  body {
+    min-width: 375px;
+
+    background: hsla(159, 35%, 45%, 1);
+
+    background: -moz-linear-gradient(50deg,
+        hsla(159, 35%, 45%, 1) 0%,
+        hsla(176, 68%, 12%, 1) 100%);
+
+    background: -moz-linear-gradient(50deg,
+        hsla(159, 35%, 45%, 1) 0%,
+        hsla(176, 68%, 12%, 1) 100%);
+
+    background: -webkit-linear-gradient(50deg,
+        hsla(159, 35%, 45%, 1) 0%,
+        hsla(176, 68%, 12%, 1) 100%);
+
+    background-attachment: fixed;
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#4A9B7F", endColorstr="#0A3431", GradientType=1);
+
+    overflow-x: hidden;
+  }
+
+  main {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .main {
+    width: 100%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  header {
+    background-color: #343a4098;
+    padding: 3rem 2rem;
+  }
+
+  input {
+    width: 22rem;
+    border-radius: 20px;
+    padding: 0.9rem 3.8rem 0.9rem 0.9rem;
+  }
+
+  .input-search-icon {
+    right: 8px;
+  }
+
+  .hour {
+    display: none;
+  }
+
+  .hour-mobile {
+    display: block;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .location-container {
+    margin-top: 8vh;
+  }
+
+  .cur-forecast {
+    margin-top: 8vh;
+  }
+
+  .cur-image {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .cur-weather {
+    font-size: 3.7rem;
+  }
+
+  .dec {
+    font-size: 2.2rem;
+    margin-top: 3vh;
+  }
+
+  .future-forecast {
+    width: 90%;
+    flex-flow: column;
+    gap: 3rem;
+  }
+
+  .future {
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .modal {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h3 {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 18rem;
+  }
+}
