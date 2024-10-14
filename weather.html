@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/cloudy.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="weather.css" />
+    <title>Meteoria_Weather</title>
+    <script defer src="weather.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="main">
+        <header>
+          <h3>Meteoria_Weather</h3>
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="Search for city"
+              class="search-form"
+            />
+            <svg class="input-search-icon">
+              <use href="icons.svg#icon-search"></use>
+            </svg>
+          </div>
+          <p class="hour">14:00</p>
+          <svg class="menu-bar">
+            <use href="icons.svg#icon-menu"></use>
+          </svg>
+        </header>
+
+        <section class="location-container">
+          <p class="location">
+            <span class="place">XX</span>, <span class="country">XX</span>
+          </p>
+          <p class="time">Wednesday, 16 November 2024</p>
+          <p class="hour hour-mobile">14:00</p>
+        </section>
+
+        <section class="cur-forecast">
+          <p class="cur-weather">50℃</p>
+        </section>
+
+        <section class="future-forecast">
+          <div class="future">
+            <p class="day">--</p>
+            <p class="data">--</p>
+          </div>
+
+          <div class="future">
+            <p class="day">--</p>
+            <p class="data">--</p>
+          </div>
+
+          <div class="future">
+            <p class="day">--</p>
+            <p class="data">--</p>
+          </div>
+
+          <div class="future">
+            <p class="day">--</p>
+            <p class="data">--</p>
+          </div>
+        </section>
+      </section>
+      <aside>
+        <div
+          title="menu"
+          class="desk-nav desk-menu-bar"
+          data-modal="menu-modal"
+        >
+          <svg class="bar">
+            <use href="icons.svg#icon-menu"></use>
+          </svg>
+        </div>
+
+        <div title="search" class="desk-nav desk-search true">
+          <svg class="search">
+            <use href="icons.svg#icon-search"></use>
+          </svg>
+        </div>
+
+        <div title="contact" class="desk-nav desk-contact" data-modal="me">
+          <svg class="contact">
+            <use href="icons.svg#icon-contact"></use>
+          </svg>
+        </div>
+
+        <div title="settings" class="desk-nav desk-settings" data-modal="ui">
+          <svg class="settings">
+            <use href="icons.svg#icon-settings"></use>
+          </svg>
+        </div>
+      </aside>
+    </main>
+    <article class="modal menu-modal hidden">
+      <h4>Menu</h4>
+      <div class="cont">
+        <div class="menu-items" data-modal="me">
+          <svg class="menu-icons">
+            <use href="icons.svg#icon-contact"></use>
+          </svg>
+          <p class="menu-text">Contact</p>
+        </div>
+
+        <div class="menu-items" data-modal="ui">
+          <svg class="menu-icons">
+            <use href="icons.svg#icon-settings"></use>
+          </svg>
+          <p class="menu-text">Settings</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="modal me hidden">
+      <h4>Contact</h4>
+
+      <div class="cont">
+        <p>
+          <a href="https://x.com/AmazingCodeweb" class="menu-text" target="_blank"
+            >Twitter</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://github.com/mediapower13"
+            class="menu-text"
+            target="_blank"
+            >Github</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/m-pious-amazing-web-%F0%9F%92%AF-83881424a/"
+            class="menu-text"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
+        <p>
+          <a
+            href="mailto:nurudeenbolama@gmail.com"
+            class="menu-text"
+            target="_blank"
+            >Mail</a
+          >
+        </p>
+      </div>
+    </article>
+
+    <article class="modal ui hidden">
+      <h4>Display</h4>
+      <div class="design"></div>
+    </article>
+    <section class="backdrop hidden"></section>
+
+    <div class="error location-err hidden">Could not get your Location</div>
+  </body>
+</html>
